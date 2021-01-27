@@ -47,7 +47,6 @@ export class Board {
     return new Board(boardRows);
   }
 
-
   static isBlocked(row: number, column: number): boolean {
     return row === 1 && column === 1;
   }
@@ -63,10 +62,10 @@ export class Board {
 
   moveUp(): Board {
     if (this.activeCell.row > 0 &&
-        !this.rows[this.activeCell.row - 1].cells[this.activeCell.column].isBlocked) {
+      !this.rows[this.activeCell.row - 1].cells[this.activeCell.column].isBlocked) {
       return this.markActiveCell(this.activeCell.row - 1, this.activeCell.column);
-    // } else if (this.rows[this.activeCell.row - 1].cells[this.activeCell.column].isBlocked) {
-    //     console.log('Nad Tobą jest zablokowana komórka');
+      // } else if (this.rows[this.activeCell.row - 1].cells[this.activeCell.column].isBlocked) {
+      //     console.log('Nad Tobą jest zablokowana komórka');
     } else {
       return this;
     }
@@ -74,7 +73,7 @@ export class Board {
 
   moveDown(): Board {
     if (this.activeCell.row < this.rows.length + 1 &&
-        !this.rows[this.activeCell.row + 1].cells[this.activeCell.column].isBlocked) {
+      !this.rows[this.activeCell.row + 1].cells[this.activeCell.column].isBlocked) {
       return this.markActiveCell(this.activeCell.row + 1, this.activeCell.column);
     } else {
       return this;
@@ -83,7 +82,7 @@ export class Board {
 
   moveRight(): Board {
     if (this.activeCell.column < this.rows[0].cells.length - 1 &&
-        !this.rows[this.activeCell.row].cells[this.activeCell.column + 1].isBlocked) {
+      !this.rows[this.activeCell.row].cells[this.activeCell.column + 1].isBlocked) {
       return this.markActiveCell(this.activeCell.row, this.activeCell.column + 1);
     } else {
       return this;
@@ -92,7 +91,7 @@ export class Board {
 
   moveLeft(): Board {
     if (this.activeCell.column > 0 &&
-        !this.rows[this.activeCell.row].cells[this.activeCell.column - 1].isBlocked) {
+      !this.rows[this.activeCell.row].cells[this.activeCell.column - 1].isBlocked) {
       return this.markActiveCell(this.activeCell.row, this.activeCell.column - 1);
     } else {
       return this;
