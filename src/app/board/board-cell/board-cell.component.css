@@ -1,0 +1,28 @@
+.cell {
+  display: flex;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: green;
+}
+
+.activeCell {
+  display: flex;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: red;
+}
+
+
+
+.blockedCell {
+  display: flex;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: black;
+}

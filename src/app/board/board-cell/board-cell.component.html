@@ -1,0 +1,25 @@
+<div  *ngIf="!cell.isActive && !cell.isBlocked"
+      class="cell">
+  {{cell.row}}/{{cell.column}}
+</div>
+
+<div *ngIf="cell.isActive"
+      class="activeCell">
+  {{cell.row}}/{{cell.column}}
+</div>
+
+<div *ngIf="cell.isBlocked"
+      class="blockedCell">
+  {{cell.row}}/{{cell.column}}
+</div>
+
+
+<!--<div  *ngIf="isOnlyPainted()"-->
+<!--      class="paintedCell">-->
+<!--  {{cell.row}}/{{cell.column}}-->
+<!--</div>-->
+
+<!--<div  *ngIf="isActiveAndPainted()"-->
+<!--      class="eventCell">-->
+<!--  {{cell.row}}/{{cell.column}}-->
+<!--</div>-->
