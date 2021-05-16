@@ -1,8 +1,10 @@
 import {BoardRow} from './board-row';
 import {BoardCell} from './board-cell';
+import {Hero} from './hero/hero';
 
 export class Board {
 
+  hero: Hero = new Hero();
   activeCell: BoardCell;
 
   constructor(public rows: Array<BoardRow>,
@@ -67,9 +69,20 @@ export class Board {
       // } else if (this.rows[this.activeCell.row - 1].cells[this.activeCell.column].isBlocked) {
       //     console.log('Nad Tobą jest zablokowana komórka');
     } else {
-      return this;
+      switch (this.rows[this.activeCell.row - 1].cells[this.activeCell.column].isBlocked) {
+        case true: {
+          return this.markActiveCell(this.activeCell.row - 2, this.activeCell.column);
+          break;
+        }
+        case false: {
+
+        }
+      }
+
     }
+    return this;
   }
+
 
   moveDown(): Board {
     if (this.activeCell.row < this.rows.length + 1 &&

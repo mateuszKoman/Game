@@ -8,8 +8,8 @@ import {Board} from './board-cell/board';
 })
 export class BoardComponent {
 
-  private rowsOfOurBoard = 7;
-  private columnsOfOurBoard = 7;
+  private rowsOfOurBoard = 15;
+  private columnsOfOurBoard = 15;
 
   board = Board.create(this.rowsOfOurBoard, this.columnsOfOurBoard);
 
